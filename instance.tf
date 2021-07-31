@@ -1,7 +1,7 @@
 
-resource "aws_instance" "centos" {
+resource "aws_instance" "instance" {
 
-  ami = coaelesce(var.ami_id, data.aws_ami.centos_8.image_id)
+  ami = coalesce(var.ami_id, data.aws_ami.centos_8.image_id)
   instance_type = var.instance_type
   associate_public_ip_address = var.associate_public_ip_address
 
